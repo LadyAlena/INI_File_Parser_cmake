@@ -15,6 +15,12 @@ set(HEADER_FILES
 # Добавление исполняемого файла
 add_executable(INI_Parser ${SOURCE_FILES} ${HEADER_FILES})
 
+# Установка стандарта C++20
+set_target_properties(INI_Parser PROPERTIES
+    CXX_STANDARD 20
+    CXX_STANDARD_REQUIRED ON
+)
+
 # Добавление директории с заголовочными файлами для поиска
 target_include_directories(INI_Parser PUBLIC source)
 
