@@ -13,10 +13,7 @@ ini_parser::ini_parser(std::string filename) {
 	fin = std::move(std::ifstream(filename));
 	if (!fin.is_open()) { throw std::ifstream::failure("Could not open the file"); }
 	process_file();
-}
-
-ini_parser::~ini_parser() {
-	if (fin.is_open()) fin.close();
+	fin.close();
 }
 
 void ini_parser::process_file() {

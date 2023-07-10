@@ -11,7 +11,6 @@
 class ini_parser {
 public:
 	ini_parser(std::string filename);
-	~ini_parser();
 
 	template<typename T>
 	T get_value(std::string request) {
